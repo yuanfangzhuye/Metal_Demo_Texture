@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TlabRenderManager : NSObject
+@import MetalKit;
+
+@interface TlabRenderManager : NSObject<MTKViewDelegate>
+
+- (instancetype)initWithMetalKitView:(MTKView *)mtkView;
 
 @end

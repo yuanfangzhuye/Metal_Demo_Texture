@@ -14,6 +14,10 @@
 		F2E88BE12500D65F00556859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E88BE02500D65F00556859 /* Assets.xcassets */; };
 		F2E88BE42500D65F00556859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E88BE22500D65F00556859 /* LaunchScreen.storyboard */; };
 		F2E88BE72500D65F00556859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BE62500D65F00556859 /* main.m */; };
+		F2E88BEF2500D72E00556859 /* Image.tga in Resources */ = {isa = PBXBuildFile; fileRef = F2E88BEE2500D72E00556859 /* Image.tga */; };
+		F2E88BF12500D75600556859 /* TlabShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BF02500D75600556859 /* TlabShaders.metal */; };
+		F2E88BF52500D7AA00556859 /* TlabRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BF42500D7AA00556859 /* TlabRenderManager.m */; };
+		F2E88BF82500D7C700556859 /* TlabImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BF72500D7C700556859 /* TlabImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		F2E88BE32500D65F00556859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E88BE52500D65F00556859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E88BE62500D65F00556859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2E88BEE2500D72E00556859 /* Image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Image.tga; sourceTree = "<group>"; };
+		F2E88BF02500D75600556859 /* TlabShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TlabShaders.metal; sourceTree = "<group>"; };
+		F2E88BF22500D77600556859 /* TlabShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TlabShaderTypes.h; sourceTree = "<group>"; };
+		F2E88BF32500D7AA00556859 /* TlabRenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TlabRenderManager.h; sourceTree = "<group>"; };
+		F2E88BF42500D7AA00556859 /* TlabRenderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TlabRenderManager.m; sourceTree = "<group>"; };
+		F2E88BF62500D7C700556859 /* TlabImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TlabImage.h; sourceTree = "<group>"; };
+		F2E88BF72500D7C700556859 /* TlabImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TlabImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +78,7 @@
 				F2E88BD82500D65E00556859 /* SceneDelegate.m */,
 				F2E88BDA2500D65E00556859 /* ViewController.h */,
 				F2E88BDB2500D65E00556859 /* ViewController.m */,
+				F2E88BED2500D6FF00556859 /* Render */,
 				F2E88BDD2500D65E00556859 /* Main.storyboard */,
 				F2E88BE02500D65F00556859 /* Assets.xcassets */,
 				F2E88BE22500D65F00556859 /* LaunchScreen.storyboard */,
@@ -74,6 +86,20 @@
 				F2E88BE62500D65F00556859 /* main.m */,
 			);
 			path = Metal_Demo_Texture;
+			sourceTree = "<group>";
+		};
+		F2E88BED2500D6FF00556859 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				F2E88BEE2500D72E00556859 /* Image.tga */,
+				F2E88BF02500D75600556859 /* TlabShaders.metal */,
+				F2E88BF22500D77600556859 /* TlabShaderTypes.h */,
+				F2E88BF62500D7C700556859 /* TlabImage.h */,
+				F2E88BF72500D7C700556859 /* TlabImage.m */,
+				F2E88BF32500D7AA00556859 /* TlabRenderManager.h */,
+				F2E88BF42500D7AA00556859 /* TlabRenderManager.m */,
+			);
+			path = Render;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +161,7 @@
 			files = (
 				F2E88BE42500D65F00556859 /* LaunchScreen.storyboard in Resources */,
 				F2E88BE12500D65F00556859 /* Assets.xcassets in Resources */,
+				F2E88BEF2500D72E00556859 /* Image.tga in Resources */,
 				F2E88BDF2500D65E00556859 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,8 +175,11 @@
 			files = (
 				F2E88BDC2500D65E00556859 /* ViewController.m in Sources */,
 				F2E88BD62500D65E00556859 /* AppDelegate.m in Sources */,
+				F2E88BF52500D7AA00556859 /* TlabRenderManager.m in Sources */,
 				F2E88BE72500D65F00556859 /* main.m in Sources */,
+				F2E88BF82500D7C700556859 /* TlabImage.m in Sources */,
 				F2E88BD92500D65E00556859 /* SceneDelegate.m in Sources */,
+				F2E88BF12500D75600556859 /* TlabShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Texture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Texture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
